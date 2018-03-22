@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	
+	<!-- UNIDADE DE PERSISTÊNCIA -->
+	<persistence-unit name="JPA-Learning">
+
+		<!-- PROVEDOR/IMPLEMENTAÇÃO DO JPA -->		
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> 
+
+		<!-- LISTA DE TODAS AS ENTIDADES MAPEADAS
+			Mapeia quais entidades estarão presentes na unidade de persistência. 
+		-->
+		<!--
+		<class></class> 
+		 -->		
+		
+		<!-- CONFIGURAÇÕES  QUE ESTA IMPLEMENTAÇÃO DA JPA UTILIZARÁ  -->
+		<properties>
+			<!-- DADOS DA CONEXÃO -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/jpalearning" />
+			<property name="javax.persistence.jdbc.user" value="aluno" />
+			<property name="javax.persistence.jdbc.password" value="" />
+
+			<!-- PROPRIEDADES DO HIBERNATE -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- ATUALIZA O BANCO, GERA AS TABELAS SE FOR PRECISO -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
