@@ -18,7 +18,7 @@
 		<!--
 		<class></class> 
 		 -->		
-		
+		<!-- CONFIGURAÇÕES BÁSICAS -->
 		<!-- CONFIGURAÇÕES  QUE ESTA IMPLEMENTAÇÃO DA JPA UTILIZARÁ  -->
 		<properties>
 			<!-- DADOS DA CONEXÃO -->
